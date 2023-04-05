@@ -1,0 +1,121 @@
+// Importing other SCSS files into this file
+@import "./reset";
+@import "./mediaQueries";
+@import "./mixins";
+@import "./variables";
+
+body {
+  display: grid;
+  place-items: center;
+
+  font-family: $ff-Kumbh-Sans;
+  font-weight: $fw-400;
+
+  background: url("../images/bg-pattern-top.svg") right 52vw bottom 35vh
+      no-repeat,
+    url("../images/bg-pattern-bottom.svg") left 48vw top 52vh no-repeat;
+  background-color: $dark-cyan;
+
+  @include md(xl) {
+    background-position: right 66vw bottom 53vh, left 71vw top 65vh;
+  }
+}
+
+// Styles for the profile card component
+.profile-card {
+  width: 325px;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+
+  box-shadow: 0 0.06rem 0.175rem hsla(229, 23%, 23%, 0.12),
+    0 0.06rem 0.125rem hsla(229, 23%, 23%, 0.24);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0.875rem 1.75rem hsla(229, 23%, 23%, 0.15),
+      0 0.625rem 0.625rem hsla(229, 23%, 23%, 0.12);
+  }
+
+  @include md(md) {
+    width: 350px;
+  }
+
+  /* Header section of the profile card */
+  &__header {
+    position: relative;
+  }
+
+  &__cover-photo {
+    height: 140px;
+    background: 0% 0% / cover no-repeat url("../images/bg-pattern-card.svg");
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  /* Avatar image of the profile card */
+  &__avatar {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    border-radius: 50%;
+  }
+
+  /* Main body section of the profile card */
+  &__body {
+    padding-top: 4.5rem;
+  }
+
+  /* Name element of the profile card */
+  &__name {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: $fw-700;
+    color: $very-dark-desaturated-blue;
+  }
+
+  /* Age element of the profile card */
+  &__age {
+    font-weight: $fw-400;
+    color: $dark-grayish-blue;
+  }
+
+  /* Location element of the profile card */
+  &__location {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: $dark-grayish-blue;
+  }
+
+  /* Stats section of the profile card */
+  &__stats {
+    @include flex(center, space-between);
+    border-top: 1px solid hsl(0, 0%, 59%, 0.5);
+    padding: 1.5rem 3rem;
+  }
+
+  /* Individual stat element in the stats section */
+  &__stat {
+    // Applying a mixin called "flex" with two arguments "center" for both "align-items" and "justify-content" CSS properties.
+    @include flex(center, center);
+    flex-direction: column;
+
+    /* Value element of the stat */
+    &-value {
+      font-size: 1.125rem;
+      font-weight: $fw-700;
+      color: $very-dark-desaturated-blue;
+    }
+
+    /* Name/label element of the stat */
+    &-name {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: $dark-grayish-blue;
+    }
+  }
+}

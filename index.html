@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    >
+    <title>Frontend Mentor | Profile card component</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+
+  <body>
+    <main>
+      <!-- The profile card section -->
+      <section class="profile-card" aria-label="Profile card">
+        <!-- The header section that contains the cover photo and avatar -->
+        <header class="profile-card__header">
+          <!-- Cover photo container -->
+          <div class="profile-card__cover-photo"></div>
+
+          <!-- The image tag for the user avatar -->
+          <img
+            src="images/image-victor.jpg"
+            alt="Profile picture of Victor Crest"
+            class="profile-card__avatar"
+          >
+        </header>
+
+        <!-- The body section that contains user information and stats -->
+        <div class="profile-card__body">
+          <!-- The user's name and age -->
+          <h2 class="profile-card__name">
+            Victor Crest
+            <span class="profile-card__age" data-label="Age">26</span>
+          </h2>
+
+          <!-- The user's location -->
+          <p class="profile-card__location">London</p>
+
+          <!-- The user's statistics -->
+          <ul class="profile-card__stats">
+            <!-- The user's followers -->
+            <li class="profile-card__stat">
+              <span class="profile-card__stat-value">80K</span>
+              <span class="profile-card__stat-name">Followers</span>
+            </li>
+
+            <!-- The user's likes -->
+            <li class="profile-card__stat">
+              <span class="profile-card__stat-value">803K</span>
+              <span class="profile-card__stat-name">Likes</span>
+            </li>
+
+            <!-- The user's photos -->
+            <li class="profile-card__stat">
+              <span class="profile-card__stat-value">1.4K</span>
+              <span class="profile-card__stat-name">Photos</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/roma-nikolaichuk/profile-card-component"
+        target="_blank"
+        >Roman Nikolaichuk</a
+      >.
+    </footer> -->
+  </body>
+</html>
